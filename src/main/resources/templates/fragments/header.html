@@ -3,8 +3,23 @@
 <head th:fragment="head(pageTitle)">
   <meta charset="UTF-8">
   <title th:text="${pageTitle}">Title</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.png}">
 </head>
 <body>
-  <header th:fragment="header">Alamofire Tutorial Header</header>
+  <header th:fragment="header">
+      <nav class="container">
+        <div>
+          <a th:href="@{/}">iOS Swift Tutorials</a>
+        </div>
+        <div>
+          <ul>
+            <li><a th:href="@{/tutorials}">Tutorials</a></li>
+            <li><a>Resources</a></li>
+          </ul>
+        </div>
+        <div></div>
+      </nav>
+  </header>
 </body>
 </html>
