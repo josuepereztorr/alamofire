@@ -8,12 +8,17 @@ public class HomeController {
 
     @GetMapping("/")
     public String getHomePage() {
-        return "index";
+        return "/index";
     }
 
     @GetMapping("/tutorials")
     public String getTutorialsPage() {
-        return "/tutorials/tutorials";
+        return "/pages/tutorials";
+    }
+
+    @GetMapping("/resources")
+    public String getResourcesPage() {
+        return "/pages/resources";
     }
 
 }
