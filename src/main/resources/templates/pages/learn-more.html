@@ -6,8 +6,21 @@
 <main>
     <div th:replace="fragments/aside :: aside"></div>
     <div id="content">
-        <h1>Learn More</h1>
-        <p>This is the learn more page</p>
+        <h1 class="content-title">Resources to get you started</h1>
+        <section class="content-section">
+            <h2>Swift Programming</h2>
+            <ul>
+                <li><a th:href="@{/apple-documentation}">Apple Swift Tutorials</a></li>
+                <li><a th:href="@{/swift-programming-language}">Official Swift Programming Language Documentation</a></li>
+            </ul>
+        </section>
+        <section class="content-section">
+            <h2>Alamofire 5</h2>
+            <ul>
+                <li><a th:href="@{request-methods/alamofire}">Apple Swift Tutorials</a></li>
+                <li><a th:href="@{request-methods/alamofire-repo}">Official Swift Programming Language Documentation</a></li>
+            </ul>
+        </section>
     </div>
 </main>
 <footer th:replace="fragments/footer :: footer"></footer>

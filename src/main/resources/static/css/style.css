@@ -69,8 +69,11 @@ aside {
 }
 
 .aside-title {
-    font-weight: bold;
-    padding-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+.aside-menu-list {
+    padding-top: 0.5rem;
 }
 
 .aside-menu-list, .aside-menu-list > li > ul {
@@ -90,7 +93,40 @@ aside {
 }
 
 #content {
-    margin: 1.5rem 0;
+    width: 50%;
+    margin: 2.5rem 0;
+}
+
+.content-title {
+    padding-top: 0.5rem;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.75rem;
+    border-bottom: 1px solid dimgrey;
+}
+
+.content-section {
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+}
+
+.content-section h2 {
+    padding-bottom: 1rem;
+}
+
+.content-section p {
+    padding-bottom: 0.75rem;
+}
+
+.content-section ul {
+    padding-left: 2.5rem;
+}
+
+.content-section ul li {
+    padding-bottom: 0.75rem;
+}
+
+.source-reference a {
+    font-size: medium;
 }
 
 /* Footer */
