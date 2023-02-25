@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head th:fragment="head(pageTitle)">
-  <meta charset="UTF-8">
-  <title th:text="${pageTitle}">Title</title>
-  <link rel="stylesheet" th:href="@{/css/style.css}">
-  <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.png}">
+    <meta charset="UTF-8">
+    <title th:text="${pageTitle}">Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.png}">
 </head>
 <body>
-  <header th:fragment="header">
-      <nav class="container">
-        <div>
-          <a th:href="@{/}">iOS Swift Tutorials</a>
-        </div>
-        <div>
-          <ul>
-            <li><a th:href="@{/tutorials}">Tutorials</a></li>
-            <li><a th:href="@{/resources}">Resources</a></li>
-          </ul>
-        </div>
+<header th:fragment="header">
+    <nav>
+        <a id="brand" th:href="@{/}">
+            <img id="brand-logo" th:src="@{img/swift_logo_color.svg}">
+            <span id="brand-title">iOS Swift Tutorials</span>
+        </a>
+        <ul id="nav-links">
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/request-methods}">HTTP Request Methods</a></li>
+            <li><a th:href="@{/learn-more}">Learn More</a></li>
+        </ul>
         <div></div>
-      </nav>
-  </header>
+    </nav>
+</header>
 </body>
 </html>

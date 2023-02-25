@@ -5,25 +5,30 @@
     <title>Title</title>
 </head>
 <body>
-<aside th:fragment="aside">
+<aside th:fragment="aside" class="container">
     <ul>
         <li>
-            <a th:href="@{/tutorials}" id="tutorial-title">HTTP Requests</a>
-            <ul class="tutorial-steps">
+            <p class="aside-title">HTTP Request Methods</p>
+            <ul class="aside-menu-list">
                 <li>
-                    <a th:href="@{/tutorials}">GET</a>
-                    <ul>
-                        <li><a th:href="@{/tutorials}">Step #1</a></li>
-                        <li><a th:href="@{/tutorials}">Step #2</a></li>
+                    <a th:href="@{/request-methods/get}">GET</a>
+                    <ul class="aside-steps">
+                        <li><a th:href="@{/get}">Step #1</a></li>
+                        <li><a th:href="@{/get}">Step #2</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a th:href="@{/tutorials}">POST</a>
-                    <ul>
-                        <li><a th:href="@{/tutorials}">Step #1</a></li>
-                        <li><a th:href="@{/tutorials}">Step #2</a></li>
+                <li >
+                    <a th:href="@{/request-methods/post}">POST</a>
+                    <ul class="aside-steps">
+                        <li><a th:href="@{/post}">Step #1</a></li>
+                        <li><a th:href="@{/post}">Step #2</a></li>
                     </ul>
                 </li>
+            </ul>
+            <p class="aside-title">Learn More</p>
+            <ul class="aside-menu-list">
+                <li><a th:href="@{/apple-documentation}">Apple Documentation</a></li>
+                <li><a th:href="@{/swift-programming-language}">Swift Programming Language</a></li>
             </ul>
         </li>
     </ul>

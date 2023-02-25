@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -6,48 +8,89 @@
 
 body {
     background-color: #001128;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: aliceblue;
 }
 
 /* Utility */
 .container {
     display: flex;
-    margin: 0.5rem;
-    padding: 1rem;
+    padding: 1rem 2.5rem;
+}
+
+ul {
+    list-style-type: none;
 }
 
 /* Navigation */
-nav ul {
+nav {
     display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    padding-left: 1.25rem;
-    margin: 0;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid dimgrey;
+}
+
+#brand {
+    display: flex;
+    align-items: center;
+    padding-left: 2.5rem;
+    padding-right: 6rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#brand-logo {
+    width: 30px;
+    height: 30px;
+}
+
+#brand-title {
+    padding-left: 0.75rem;
+}
+
+#nav-links {
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+#nav-links li {
+    margin-right: 2.5rem;
 }
 
 /* Main */
 main {
     display: flex;
+    padding: 1rem 2rem;
 }
 
 aside {
     width: 20%;
-    text-align: center;
 }
 
-#tutorial-title {
-    font-size: 1rem;
+.aside-title {
     font-weight: bold;
+    padding-bottom: 0.5rem;
 }
 
-#tutorial-steps {
-    font-size: 0.50rem;
+.aside-menu-list, .aside-menu-list > li > ul {
+    margin-left: 2rem;
+}
+
+.aside-menu-list > li {
+    padding-bottom: 0.5rem;
+}
+
+.aside-steps {
+    padding-top: 0.5rem;
+}
+
+.aside-steps > li {
+    padding-bottom: 0.5rem;
 }
 
 #content {
-    background: aliceblue;
-    color: black;
+    margin: 1.5rem 0;
 }
 
 /* Footer */
