@@ -13,6 +13,7 @@ body {
 /* Utility */
 .container {
     display: flex;
+    margin: 0.5rem;
     padding: 1rem;
 }
 
@@ -21,8 +22,32 @@ nav ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    padding: 0;
+    padding-left: 1.25rem;
     margin: 0;
+}
+
+/* Main */
+main {
+    display: flex;
+}
+
+aside {
+    width: 20%;
+    text-align: center;
+}
+
+#tutorial-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#tutorial-steps {
+    font-size: 0.50rem;
+}
+
+#content {
+    background: aliceblue;
+    color: black;
 }
 
 /* Footer */

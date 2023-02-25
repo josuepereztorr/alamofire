@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<aside th:fragment="aside">
+    <ul>
+        <li>
+            <a th:href="@{/tutorials}" id="tutorial-title">HTTP Requests</a>
+            <ul class="tutorial-steps">
+                <li>
+                    <a th:href="@{/tutorials}">GET</a>
+                    <ul>
+                        <li><a th:href="@{/tutorials}">Step #1</a></li>
+                        <li><a th:href="@{/tutorials}">Step #2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a th:href="@{/tutorials}">POST</a>
+                    <ul>
+                        <li><a th:href="@{/tutorials}">Step #1</a></li>
+                        <li><a th:href="@{/tutorials}">Step #2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</aside>
+</body>
+</html>
