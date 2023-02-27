@@ -12,9 +12,14 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("/request-methods")
-    public String getRequestMethodsPage() {
-        return "pages/methods/request-methods";
+    @GetMapping("/get")
+    public String getGETPage() {
+        return "pages/methods/get";
+    }
+
+    @GetMapping("/post")
+    public String getPOSTPage() {
+        return "pages/methods/post";
     }
 
     @GetMapping("/learn-more")
@@ -30,6 +35,21 @@ public class HomeController {
     @RequestMapping("/apple-documentation")
     public String getSwiftDev() {
         return "redirect:https://developer.apple.com/swift/";
+    }
+
+    @RequestMapping("/http-mozilla")
+    public String getMozilla() {
+        return "redirect:https://developer.mozilla.org/en-US/docs/Web/HTTP";
+    }
+
+    @RequestMapping("/alamofire")
+    public String getAlamofire() {
+        return "redirect:https://www.kodeco.com/6587213-alamofire-5-tutorial-for-ios-getting-started";
+    }
+
+    @RequestMapping("/alamofire-repo")
+    public String getAlamofireRepo() {
+        return "redirect:https://github.com/Alamofire/Alamofire";
     }
 
 }
