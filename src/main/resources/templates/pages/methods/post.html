@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
-<head th:replace="fragments/header :: head(pageTitle='iOS Swift Tutorials | HTTP Request Methods - POST')"></head>
+<head th:replace="fragments/header :: head(pageTitle='iOS Swift Tutorials | HTTP POST Method')"></head>
 <body>
-    <header th:replace="fragments/header :: header"></header>
-    <main>
-        <div th:replace="fragments/aside :: aside"></div>
-        <div id="content">
-            <h1>POST</h1>
-            <p>This is the POST page</p>
-        </div>
-    </main>
-    <footer th:replace="fragments/footer :: footer"></footer>
+<header th:replace="fragments/header :: header"></header>
+<main>
+    <div th:replace="fragments/aside :: aside"></div>
+    <div id="content">
+        <h1 class="content-title">POST Method using Alamofire 5</h1>
+        <section class="content-section">
+            <h2>What is an HTTP GET method?</h2>
+            <p>An HTTP GET method is used to send data (a resource) to an external
+                server to change (update) the state of a resource.
+            </p>
+        </section>
+        <section class="content-section">
+            <h2>Goal</h2>
+            <p>Coming Soon
+            </p>
+        </section>
+    </div>
+</main>
+<footer th:replace="fragments/footer :: footer"></footer>
 </body>
 </html>

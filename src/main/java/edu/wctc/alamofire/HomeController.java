@@ -13,13 +13,28 @@ public class HomeController {
     }
 
     @GetMapping("/get")
-    public String getGETMethodsPage() {
+    public String getGETPage() {
         return "pages/methods/get";
     }
 
     @GetMapping("/get/create-project")
-    public String getGETPage() {
+    public String getCreateProjectPage() {
         return "pages/methods/get/create-project";
+    }
+
+    @GetMapping("/get/create-models")
+    public String getCreateModelsPage() {
+        return "pages/methods/get/create-models";
+    }
+
+    @GetMapping("/get/create-views")
+    public String getCreateViewsPage() {
+        return "pages/methods/get/create-views";
+    }
+
+    @GetMapping("/get/connect-api")
+    public String getConnectAPIPage() {
+        return "pages/methods/get/connect-api";
     }
 
     @GetMapping("/post")
@@ -55,6 +70,11 @@ public class HomeController {
     @RequestMapping("/alamofire-repo")
     public String getAlamofireRepo() {
         return "redirect:https://github.com/Alamofire/Alamofire";
+    }
+
+    @RequestMapping("/auto-dev")
+    public String getAutoDev() {
+        return "redirect:https://www.auto.dev/";
     }
 
 }

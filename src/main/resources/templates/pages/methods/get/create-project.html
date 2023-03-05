@@ -6,28 +6,38 @@
 <main>
     <div th:replace="fragments/aside :: aside"></div>
     <div id="content">
-        <h1 class="content-title">Creating the Xcode Project</h1>
+        <h1 class="content-title">Creating Xcode Project</h1>
         <section class="content-section">
             <h2>Getting Started</h2>
-            <ul class="tutorial-steps">
-                <li>Start by creating a new Xcode project either by clicking on
-                    <span class="step-action">Create a new Xcode project</span> or
-                    by going to <span class="step-action">File -> New -> Project</span>.
-                </li>
-                <li>Start by creating a new Xcode project either by clicking on
-                    <span class="step-action">Create a new Xcode project</span> or
-                    by going to <span class="step-action">File -> New -> Project</span>.
-                </li>
-                <li>Start by creating a new Xcode project either by clicking on
-                    <span class="step-action">Create a new Xcode project</span> or
-                    by going to <span class="step-action">File -> New -> Project</span>.
-                </li>
-                <li>Start by creating a new Xcode project either by clicking on
-                    <span class="step-action">Create a new Xcode project</span> or
-                    by going to <span class="step-action">File -> New -> Project</span>.
-                </li>
-            </ul>
+            <p class="step-paragraph">Start by creating a new Xcode project either by clicking on
+                <span class="step-action">Create a new Xcode project</span> from the Xcode welcome window (on startup) or
+                by going to <span class="step-action"> File -> New -> Project</span>.
+            </p>
+            <img class="content-img" th:src="@{/img/project-startup.png}" width="1500" height="1082">
+            <p class="step-paragraph">Next, a window will appear asking you to <span class="step-action">Choose a template for your new project</span>:
+                select <span class="step-action">App</span> and click <span class="step-action">Next</span>.
+            </p>
+            <img class="content-img" th:src="@{/img/app-template.png}" width="1500" height="1082">
+            <p class="step-paragraph">Select the options for the project. For the purpose of this tutorial I chose the following options for my project.
+                After that click <span class="step-action">Next</span>.
+            </p>
+            <img class="content-img" th:src="@{/img/project-options.png}" width="1500" height="1082">
+            <p class="step-paragraph">Select the location you wish to store your project and click <span class="step-action">Create</span>.
+                <br>Note: For this project you can uncheck <span class="step-action">Create a Git repository on my Mac</span>
+            </p>
+            <img class="content-img" th:src="@{/img/project-location.png}" width="1500" height="1082">
+            <p class="step-paragraph">
+                At this point the initial project setup is complete. The starting template comes with an initial ContentView.swift
+                file that contains an Image() and a Text() view. In addition, we have the vindecoderApp.swift which is the entry point
+                in our application.
+            </p>
+            <img class="content-img" th:src="@{/img/project-initial.png}" width="1500" height="1082">
+            <img class="content-img" th:src="@{/img/initial-content-view.png}" width="1040" height="1062">
         </section>
+        <div class="next-page">
+            <a></a>
+            <a th:href="@{/get/create-models}">Creating Models -></a>
+        </div>
     </div>
 </main>
 <footer th:replace="fragments/footer :: footer"></footer>

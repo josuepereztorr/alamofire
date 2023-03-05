@@ -12,6 +12,12 @@ body {
     color: aliceblue;
 }
 
+p {
+    font-size: 1.15rem;
+}
+
+/* Images */
+
 /* Utility */
 .container {
     display: flex;
@@ -98,6 +104,12 @@ aside {
     margin: 2.5rem 0;
 }
 
+.content-img {
+    width: 70%;
+    height: 70%;
+    padding: 1rem 0 1rem 0;
+}
+
 .content-title {
     padding-top: 0.5rem;
     padding-bottom: 1.25rem;
@@ -130,19 +142,36 @@ aside {
     list-style-type: circle;
 }
 
+#options {
+    display: flex;
+    margin: 0.5rem;
+}
+
 .source-reference a {
     font-size: medium;
 }
 
 .step-action {
+    color: lightgray;
     font-weight: lighter;
     font-style: italic;
-    text-decoration: underline;
+    font-weight: bold;
+}
+
+.step-paragraph {
+    padding: 0.75rem 0;
+}
+
+.next-page {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
 }
 
 /* Footer */
 footer {
     text-align: center;
+    padding: 2rem 0 2rem 0;
 }
 
 

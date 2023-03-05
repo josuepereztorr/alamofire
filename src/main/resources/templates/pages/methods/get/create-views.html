@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<head th:replace="fragments/header :: head(pageTitle='iOS Swift Tutorials | Create Views')"></head>
 <body>
-
+<header th:replace="fragments/header :: header"></header>
+<main>
+    <div th:replace="fragments/aside :: aside"></div>
+    <div id="content">
+        <h1 class="content-title">Creating Views</h1>
+        <section class="content-section">
+            <h2>Getting Started</h2>
+            <p class="step-paragraph">Start by creating a new Xcode project either by clicking on
+                <span class="step-action">Create a new Xcode project</span> from the Xcode welcome window (on startup) or
+                by going to <span class="step-action"> File -> New -> Project</span>.
+            </p>
+            <img class="content-img" th:src="@{/img/project-startup.png}" width="1500" height="1082">
+        </section>
+        <div class="next-page">
+            <a th:href="@{/get/create-models}"><- Creating Models</a>
+            <a th:href="@{/get/connect-api}">Connect to external API -></a>
+        </div>
+    </div>
+</main>
+<footer th:replace="fragments/footer :: footer"></footer>
 </body>
 </html>
