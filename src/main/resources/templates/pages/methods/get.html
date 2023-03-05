@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
-<head th:replace="fragments/header :: head(pageTitle='iOS Swift Tutorials | Learn More')"></head>
+<head th:replace="fragments/header :: head(pageTitle='iOS Swift Tutorials | HTTP GET Method')"></head>
 <body>
 <header th:replace="fragments/header :: header"></header>
 <main>
     <div th:replace="fragments/aside :: aside"></div>
     <div id="content">
-        <h1 class="content-title">HTTP GET Method</h1>
+        <h1 class="content-title">GET Method using Alamofire 5</h1>
         <section class="content-section">
-            <h2>Swift Programming</h2>
+            <h2>What an HTTP GET method?</h2>
+            <p>An HTTP GET method is used to request data (a resource) from an external
+                server but, it should not change tha state of the server.
+            </p>
+        </section>
+        <section class="content-section">
+            <h2>Goal</h2>
+            <p>The goal of this tutorial will be to create a VIN (Vehicle Identification Number)
+                decoder application using the Alamofire HTTP networking library and a external API.
+            </p>
+        </section>
+        <section class="content-section">
+            <h2>Requirements</h2>
             <ul>
-                <li><a th:href="@{/apple-documentation}">Apple Swift Tutorials</a></li>
-                <li><a th:href="@{/swift-programming-language}">Official Swift Documentation</a></li>
+                <li>Xcode 11 or greater (I will use v14.3)</li>
+                <li>Previous Swift programming knowledge</li>
+                <li>Alamofire 5</li>
+                <li>www.auto.dev Account</li>
             </ul>
         </section>
     </div>

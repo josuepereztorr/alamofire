@@ -13,8 +13,13 @@ public class HomeController {
     }
 
     @GetMapping("/get")
-    public String getGETPage() {
+    public String getGETMethodsPage() {
         return "pages/methods/get";
+    }
+
+    @GetMapping("/get/create-project")
+    public String getGETPage() {
+        return "pages/methods/get/create-project";
     }
 
     @GetMapping("/post")

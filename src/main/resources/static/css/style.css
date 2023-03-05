@@ -92,6 +92,7 @@ aside {
     padding-bottom: 0.5rem;
 }
 
+/* content */
 #content {
     width: 50%;
     margin: 2.5rem 0;
@@ -125,8 +126,18 @@ aside {
     padding-bottom: 0.75rem;
 }
 
+.content-section > ul > li {
+    list-style-type: circle;
+}
+
 .source-reference a {
     font-size: medium;
+}
+
+.step-action {
+    font-weight: lighter;
+    font-style: italic;
+    text-decoration: underline;
 }
 
 /* Footer */
