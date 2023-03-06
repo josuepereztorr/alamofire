@@ -6,7 +6,7 @@
 <main>
     <div th:replace="fragments/aside :: aside"></div>
     <div id="content">
-        <h1 class="content-title">Creating Xcode Project</h1>
+        <h1 class="content-title">Create Xcode Project</h1>
         <section class="content-section">
             <h2>Getting Started</h2>
             <p class="step-paragraph">Start by creating a new Xcode project either by clicking on
@@ -28,15 +28,15 @@
             <img class="content-img" th:src="@{/img/project-location.png}" width="1500" height="1082">
             <p class="step-paragraph">
                 At this point the initial project setup is complete. The starting template comes with an initial ContentView.swift
-                file that contains an Image() and a Text() view. In addition, we have the vindecoderApp.swift which is the entry point
+                SwiftUI file that contains an Image() and a Text() view. In addition, we have the vindecoderApp.swift which is the entry point
                 in our application.
             </p>
-            <img class="content-img" th:src="@{/img/project-initial.png}" width="1500" height="1082">
+<!--            <img class="content-img" th:src="@{/img/project-initial.png}" width="1500" height="1082">-->
             <img class="content-img" th:src="@{/img/initial-content-view.png}" width="1040" height="1062">
         </section>
         <div class="next-page">
             <a></a>
-            <a th:href="@{/get/create-models}">Creating Models -></a>
+            <a th:href="@{/get/create-views}">Create Views -></a>
         </div>
     </div>
 </main>

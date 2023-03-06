@@ -6,18 +6,79 @@
 <main>
     <div th:replace="fragments/aside :: aside"></div>
     <div id="content">
-        <h1 class="content-title">Creating Views</h1>
+        <h1 class="content-title">Create Views</h1>
+        <div class="note">Note: This tutorial will not handle optional errors and will be doing force unwrapping without catching.</div>
         <section class="content-section">
-            <h2>Getting Started</h2>
-            <p class="step-paragraph">Start by creating a new Xcode project either by clicking on
-                <span class="step-action">Create a new Xcode project</span> from the Xcode welcome window (on startup) or
-                by going to <span class="step-action"> File -> New -> Project</span>.
+            <h2>Create Views Directory and SwiftUI Files</h2>
+            <p class="step-paragraph">On the file explorer (left side of Xcode), click on the root directory
+                <span class="step-action">vindecoder</span>, then right click and select
+                <span class="step-action">New Group</span>. Create a new group called <span class="step-action">Views</span>.
             </p>
-            <img class="content-img" th:src="@{/img/project-startup.png}" width="1500" height="1082">
+            <img class="content-img" th:src="@{/img/project-root.png}" width="530" height="300">
+            <p class="step-paragraph">On the <span class="step-action">Views</span> group, create a new file by right-clicking
+                the <span class="step-action">Views</span> group and selecting <span class="step-action">New File...</span>. Then
+                under <span class="step-action">User Interface</span> select <span class="step-action">SwiftUI View</span> and
+                click <span class="step-action">Next</span>. Name it InputView and click <span class="step-action">Create</span>.
+                This will create a file named <span class="step-action">InputView.swift</span>
+            </p>
+            <img class="content-img" th:src="@{/img/project-create-view.png}" width="1494" height="1076">
+            <p>Use the same steps above to create <span class="step-action">OutputView.swift</span>,
+                <span class="step-action">ActionButtonView.swift</span>, and <span class="step-action">ResultFieldView.swift</span>.
+                All the files under the <span class="step-action">Views</span> group.
+            </p>
+            <p class="step-paragraph">The root directory should now look like the image below.</p>
+            <img class="content-img" th:src="@{/img/project-views-file-structure.png}" width="524" height="512">
+        </section>
+        <section class="content-section">
+            <h2>Create Views</h2>
+            <p class="step-paragraph">For <span class="step-action">InputView.swift</span> we will need two bindings (to make them reactive) properties
+                for the vin number and the vehicle of type Vehicle object (created in the Models step). Our view will be made of a VStack with
+                a Text(), TextField() and ActionButtonView() views. I have also added some visual details such as font size and styling.
+            </p>
+            <div class="side-by-side">
+                <img class="content-img" th:src="@{/img/project-input-view.png}" width="1134" height="488">
+                <img class="content-img" th:src="@{/img/project-input-code.png}" width="1240" height="1042">
+            </div>
+            <p class="step-paragraph">For <span class="step-action">OutputView.swift</span> we will need only one binding property
+                for the vehicle object (created in the Models step). Our view will be made of a VStack with
+                a Text() and another VStack() containing the vehicle properties. The ResultFieldView view will take in arguments
+                from the vehicle property and output them the view.
+            </p>
+            <div class="side-by-side">
+                <img class="content-img" th:src="@{/img/project-output-view.png}" width="1120" height="966">
+                <img class="content-img" th:src="@{/img/project-output-code.png}" width="1840" height="1962">
+            </div>
+            <p class="step-paragraph">For <span class="step-action">FieldResultView.swift</span> we will need a state binding property
+                for the title placeholder and result. Our view will be made of a HStack with
+                a two Text() views containing the title of the property the decoded vin property.
+            </p>
+            <div class="side-by-side">
+                <img class="content-img" th:src="@{/img/project-result-view.png}" width="474" height="160">
+                <img class="content-img" th:src="@{/img/project-result-view-code.png}" width="1080" height="1152">
+            </div>
+            <p class="step-paragraph">For <span class="step-action">ActionButtonView.swift</span> we will need three binding properties
+                for the vin, vehicle, and opacity of the error message. Our view will be made of a VStack with
+                a Button() and a Text() view. When the button is clicked the logic of calling the external API will be run. If there is no
+                vin entered the opacity of the error message will be to 1 but, if the decode button is clicked again with a vin number it will
+                succeed.
+            </p>
+            <div class="side-by-side">
+                <img class="content-img" th:src="@{/img/project-button-view.png}" width="446" height="190">
+                <img class="content-img" th:src="@{/img/project-button-code.png}" width="1204" height="1422">
+            </div>
+            <p class="step-paragraph">For <span class="step-action">ContentView.swift</span> we will need two binding properties
+                for the vin and vehicle. Our view will be made of a VStack with
+                a Text() view for the title of the app and another VStack() view containing our InputView and OutputView(). When the button is
+                clicked the logic will be run and validated sending the data to the OutputView.
+            </p>
+            <div class="side-by-side">
+                <img class="content-img" th:src="@{/img/project-content-view.png}" width="446" height="190">
+                <img class="content-img" th:src="@{/img/project-content-code.png}" width="1204" height="1422">
+            </div>
         </section>
         <div class="next-page">
-            <a th:href="@{/get/create-models}"><- Creating Models</a>
-            <a th:href="@{/get/connect-api}">Connect to external API -></a>
+            <a th:href="@{/get/create-project}"><- Create Xcode Project</a>
+            <a th:href="@{/get/create-models}">Create Models -></a>
         </div>
     </div>
 </main>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
-<head th:replace="fragments/header :: head(pageTitle='iOS Swift Tutorials | Create Project')"></head>
+<head th:replace="fragments/header :: head(pageTitle='iOS Swift Tutorials | Connect to External API')"></head>
 <body>
 <header th:replace="fragments/header :: header"></header>
 <main>
     <div th:replace="fragments/aside :: aside"></div>
     <div id="content">
-        <h1 class="content-title">Connecting to an external API</h1>
+        <h1 class="content-title">Connect to External API</h1>
         <section class="content-section">
             <h2>Getting Started</h2>
             <p class="step-paragraph">Start by creating a new Xcode project either by clicking on
@@ -16,7 +16,7 @@
             <img class="content-img" th:src="@{/img/project-startup.png}" width="1500" height="1082">
         </section>
         <div class="next-page">
-            <a th:href="@{/get/create-views}"><- Creating Views</a>
+            <a th:href="@{/get/create-views}"><- Create Models</a>
             <a th:href="@{/post}">POST Methods -></a>
         </div>
     </div>

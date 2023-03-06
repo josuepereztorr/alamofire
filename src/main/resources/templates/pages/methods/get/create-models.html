@@ -6,18 +6,49 @@
 <main>
     <div th:replace="fragments/aside :: aside"></div>
     <div id="content">
-        <h1 class="content-title">Creating Models</h1>
+        <h1 class="content-title">Create Models</h1>
         <section class="content-section">
-            <h2>Getting Started</h2>
-            <p class="step-paragraph">Start by creating a new Xcode project either by clicking on
-                <span class="step-action">Create a new Xcode project</span> from the Xcode welcome window (on startup) or
-                by going to <span class="step-action"> File -> New -> Project</span>.
+            <h2>Creating Swift Model Files</h2>
+            <p class="step-paragraph">On the file explorer, click on the root directory
+                <span class="step-action">vindecoder</span>, then right click and select
+                <span class="step-action">New File...</span>. Then under <span class="step-action">Source</span> select <span class="step-action">Swift File</span>. Name
+                it Models and click <span class="step-action">Create</span>. This will create a file named
+                <span class="step-action">Models.swift</span>. Next, create another file named HelperMethods following the same procedure as above.
             </p>
-            <img class="content-img" th:src="@{/img/project-startup.png}" width="1500" height="1082">
+            <img class="content-img" th:src="@{/img/project-create-file.png}" width="1502" height="1064">
+            <p class="step-paragraph">The root directory should now look like the image below.</p>
+            <img class="content-img" th:src="@{/img/project-file-structure.png}" width="528" height="410">
+            <p class="step-paragraph">For the Models.swift file I have created a Vehicle object that has only the properties I
+            want from the API call; I left out many for the purpose of this tutorial. Furthermore, I have created sub structs for
+            nested objects in the JSON. One important part is that each of these object must confirm to the
+                <span class="step-action">Codable</span> protocol. Also, I added a function that return a mock Vehicle and a property
+                for a mock VIN; for testing purposes.
+            </p>
+            <div class="side-by-side">
+                <img class="content-img" th:src="@{/img/project-models-vehicle-code.png}" width="1840" height="2186">
+            </div>
+            <div class="side-by-side">
+                <img class="content-img" th:src="@{/img/project-models-1.png}" width="1040" height="1826">
+                <img class="content-img" th:src="@{/img/project-models-2.png}" width="1040" height="1916">
+            </div>
+            <p class="step-paragraph">For the HelperMethods.swift file, the function takes in a vin number. It then makes the call
+            to the external API and tries to get a response. Next, it tries to convert the data into a Vehicle object. After
+            the function is run an escaping closure returns a Vehicle and Error object (either can be nil).</p>
+            <img class="content-img" th:src="@{/img/project-helper-code.png}" width="1840" height="1152">
+        </section>
+        <section class="content-section">
+            <h2>Adding Mock Data to Previews</h2>
+            <p class="step-paragraph"> Now that we have our Vehicle object we can run the static members of the struct to
+                use our SwiftUI previews correctly. Update each file preview to match the .constant() values.
+            </p>
+            <div class="side-by-side">
+                <img class="content-img" th:src="@{/img/project-preview-example-code.png}" width="1332" height="476">
+                <img class="content-img" th:src="@{/img/project-preview-code.png}" width="1840" height="702">
+            </div>
         </section>
         <div class="next-page">
-            <a th:href="@{/get/create-project}"><- Creating Xcode Project</a>
-            <a th:href="@{/get/create-views}">Creating Views -></a>
+            <a th:href="@{/get/create-views}"><- Create Views</a>
+            <a th:href="@{/get/connect-api}">Connect to External API -></a>
         </div>
     </div>
 </main>

@@ -16,7 +16,21 @@ p {
     font-size: 1.15rem;
 }
 
-/* Images */
+.note {
+    margin: 1rem 0 1rem 0;
+    border: 1px solid floralwhite;
+    border-radius: 13px;
+    padding: 1rem;
+}
+
+.side-by-side {
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-by-side > img {
+    padding: 1rem;
+}
 
 /* Utility */
 .container {
