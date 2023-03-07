@@ -7,17 +7,60 @@
     <div th:replace="fragments/aside :: aside"></div>
     <div id="content">
         <h1 class="content-title">Connect to External API</h1>
+        <div class="note">Note: For the simplicity of this tutorial the API key will not be stored on an environment property such as a .plist.</div>
         <section class="content-section">
-            <h2>Getting Started</h2>
-            <p class="step-paragraph">Start by creating a new Xcode project either by clicking on
-                <span class="step-action">Create a new Xcode project</span> from the Xcode welcome window (on startup) or
-                by going to <span class="step-action"> File -> New -> Project</span>.
+            <h2>Get API Key</h2>
+            <p class="step-paragraph">Navigate to <span class="step-action"><a th:href="@{/auto-dev}">https://www.auto.dev</a></span>
+                and click on Sign In. From there either create a new account or sign in using a social login.
             </p>
-            <img class="content-img" th:src="@{/img/project-startup.png}" width="1500" height="1082">
+            <img class="content-img" th:src="@{/img/project-auto-page.png}" width="1263" height="713">
+            <p class="step-paragraph">From the home page, click on the Vin Decode card which should navigate you to the Vin Decode page.
+             From there click on <span class="step-action">Get started with VIN-Decode</span>.
+            </p>
+            <img class="content-img" th:src="@{/img/project-vin-decode-home.png}" width="1279" height="659">
+            <p class="step-paragraph">On the page there will be a section that will provide an example request.
+                The image below shows an example of a request with an example vin (red underline) and
+                your API key (I have blocked mine for security). You can test this by clicking on the link, which
+                should return a JSON response to the test vin on the query.
+            </p>
+            <img class="content-img" th:src="@{/img/project-auto-key.png}" width="838" height="200">
+        </section>
+        <section class="content-section">
+            <h2>Update HelperMethods.swift and Add the Alamofire Package</h2>
+            <p class="step-paragraph">On Xcode, navigate to the HelperMethods.swift file and create a new let property called
+                <span class="step-action">key</span>. This property will store your API Key as a string which will be interpolated
+                on the url property as seen in the image below. Add your API Key to the key property.
+            </p>
+            <img class="content-img" th:src="@{/img/project-helper-update.png}" width="1840" height="1152">
+            <p>
+                Finally, you will need to add the Alamofire package to your project. To do this right click on the root folder and
+                select <span class="step-action">Add Package...</span>. This should open a small window like the image below.
+            </p>
+            <img class="content-img" th:src="@{/img/project-add-package.png}" width="2210" height="1248">
+            <p>
+                On the search bar, paste the GitHub repository link: https://github.com/Alamofire, then click <span class="step-action">Add Package</span>.
+                This should open a small window to fetch the package.
+            </p>
+            <img class="content-img" th:src="@{/img/project-alamofire-search.png}" width="2212" height="1254">
+            <p>
+                Now Xcode will fetch the package from the GitHub URL provided which it may take 1-2 minutes to complete.
+                Once complete it will ask you to verify that you want to add this package. Click <span class="step-action">Add Package</span>.
+            </p>
+            <img class="content-img" th:src="@{/img/project-alamofire-add.png}" width="1354" height="652">
+            <p>
+                If the Alamofire package was successfuly added it should now appear under Package Dependencies as shown in
+                the image below.
+            </p>
+            <img class="content-img" th:src="@{/img/project-alamofire-added.png}" width="526" height="535">
+            <p>
+                In order to use Alamofire, you must add an import statement on HelperMethods.swift.
+                Add <span class="step-action">import Alamofire</span> below the Foundation framework import as shown below.
+            </p>
+            <img class="content-img" th:src="@{/img/project-alamofire-import.png}" width="1840" height="1106">
         </section>
         <div class="next-page">
             <a th:href="@{/get/create-views}"><- Create Models</a>
-            <a th:href="@{/post}">POST Methods -></a>
+            <a th:href="@{/get/test-app}">Test the App -></a>
         </div>
     </div>
 </main>

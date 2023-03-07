@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="fragments/header :: head(pageTitle='iOS Swift Tutorials | Testing the App')"></head>
+<body>
+<header th:replace="fragments/header :: header"></header>
+<main>
+    <div th:replace="fragments/aside :: aside"></div>
+    <div id="content">
+        <h1 class="content-title">Testing the App</h1>
+        <section class="content-section">
+            <h2>Run the App Simulator</h2>
+            <p class="step-paragraph">On the file explorer (left side of Xcode), click on the root directory
+                <span class="step-action">Product</span>, then select <span class="step-action">Run</span>
+                this should build and run your project. After this an iphone simulator should open up to try your application.
+                There should be no VIN on the TextField view and the results should show our mock vehicle object.
+            </p>
+            <p class="step-paragraph">To test the API, input a VIN and click <span class="step-action">Decode</span>.
+                This should now show all the information from the VIN on the bottom view.
+            </p>
+            <div class="side-by-side">
+                <img class="content-img" th:src="@{/img/project-simulator-startup.png}" width="530" height="300">
+                <img class="content-img" th:src="@{/img/project-simulator-decoded.png}" width="530" height="300">
+            </div>
+        </section>
+        <div class="next-page">
+            <a th:href="@{/get/connect-api}"><- Connect to External API</a>
+            <a th:href="@{/post}">POST Method -></a>
+        </div>
+    </div>
+</main>
+<footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>

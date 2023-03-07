@@ -37,6 +37,11 @@ public class HomeController {
         return "pages/methods/get/connect-api";
     }
 
+    @GetMapping("/get/test-app")
+    public String getTestAppPage() {
+        return "pages/methods/get/test-app";
+    }
+
     @GetMapping("/post")
     public String getPOSTPage() {
         return "pages/methods/post";
